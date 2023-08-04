@@ -52,10 +52,9 @@ startInstall()
         # pull an nginx proxy manager docker-compose file from github
         echo "    1. Pulling a default SoftEther VPN Server docker-compose.yml file."
 
-        mkdir -p docker/softherther-vpn-server
-        cd docker/softherther-vpn-server
-
-        curl https://raw.githubusercontent.com/shawshanck/SoftEther-VPS-Server/main/softether-vpn-server.yml -o docker-compose.yml >> ~/docker-script-install.log 2>&1
+        mkdir docker -p && cd docker
+        git clone https://github.com/shawshanck/SoftEther-VPS-Server.git
+        cd SoftEther-VPS-Server
 
         echo "    2. Running the docker-compose.yml to install and start Install SoftEther VPN Server"
         echo ""
