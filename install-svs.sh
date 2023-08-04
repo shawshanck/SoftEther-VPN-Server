@@ -17,9 +17,11 @@ installApps()
     echo -e "Please select ${GREEN}'y'${NC} for each item you would like to install."
     echo -e "${RED}NOTE:${NC} Without Docker and Docker-Compose, you cannot install this container.${NC}"
     echo -e ""
+    echo -e "${RED}NOTE:${NC} This installation uses ports: ${GREEN}443 992 1194 5443 5555 8888 55555.${NC}"
+    echo -e ""
     echo -e "To install Docker and Docker-Compose, use the link below:"
     echo -e "${GREEN}https://github.com/shawshanck/Docker-and-Docker-Compose${NC}"
-     echo -e ""
+    echo -e ""
     echo -e "      ${CYAN}Provided to you by ${YELLOW}Mohammad Mohammadpour${NC}"
     echo -e "          ${YELLOW}https://github.com/shawshanck${NC}"
     echo -e ""
@@ -49,7 +51,7 @@ startInstall()
         echo "###     Install SoftEther VPN Server   ###"
         echo "##########################################"
     
-        # pull an nginx proxy manager docker-compose file from github
+        # pull a softether vpn server docker-compose file from github
         echo "    1. Pulling a default SoftEther VPN Server docker-compose.yml file."
 
         mkdir docker -p && cd docker
@@ -65,13 +67,18 @@ startInstall()
 
         echo -e "    3. You can find SoftEther VPN Server files at ./docker/SoftEther-VPS-Server"
         echo -e ""
-        echo -e "${NC}    Navigate to your ${GREEN}server hostname / IP address ${NC}on ${GREEN}port 81${NC} to setup${NC}"
-        echo -e "    Example: 0.0.0.0:81"
+        echo -e "${NC}      Now Download and install ${GREEN}SoftEther Server Manager ${NC}from the link below:"
+        echo -e "${BLUE}      https://www.softether-download.com/en.aspx?product=softether"
         echo -e ""
         echo -e ""
-        echo -e "    The default login credentials for NGinX Proxy Manager are:"
-        echo -e "${GREEN}        username: ${CYAN}admin@example.com${NC}"
-        echo -e "${GREEN}        password: ${CYAN}changeme${NC}"
+        echo -e "    After installation of SoftEther Server Manager successfully completed:"
+        echo -e "${GREEN}        1- Create a new setting"
+        echo -e "${GREEN}        2- Enter your server/machine IP address in "Host Name""
+        echo -e "${GREEN}        3- Select your prefered port. Default is 443"
+        echo -e "${GREEN}        4- Click on OK"
+        echo -e "${GREEN}        5- Now Connect and do the configurations"
+        echo -e "${GREEN}        6- For further tutorials and guides please visit the page below:"
+        echo -e "${BLUE}        https://github.com/shawshanck/SoftEther-VPS-Server"
 
         echo -e ""
         echo -e ""
@@ -101,7 +108,7 @@ echo -e ""
 echo -e "${YELLOW}------------------------------------------------${NC}"
 echo -e ""
 
-PS3="Please enter 1 to Install SoftEther VPN Server or 2 to exit setup. "
+PS3="Please enter 1 to Install SoftEther VPN Server or 2 to exit setup: "
 select _ in \
     "Install SoftEther VPN Server" \
     "Exit"
