@@ -74,7 +74,7 @@ startInstall()
         echo -e "    After installation of SoftEther Server Manager successfully completed:"
         echo -e "${GREEN}        1- Create a new setting"
         echo -e "${GREEN}        2- Enter your server/machine IP address in "Host Name""
-        echo -e "${GREEN}        3- Select your prefered port. Default is 443"
+        echo -e "${GREEN}        3- Select your preferred port. Default is 443"
         echo -e "${GREEN}        4- Click on OK"
         echo -e "${GREEN}        5- Now Connect and do the configurations"
         echo -e "${GREEN}        6- For further tutorials and guides please visit the page below:"
