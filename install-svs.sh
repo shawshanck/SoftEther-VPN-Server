@@ -56,14 +56,14 @@ startInstall()
         git clone https://github.com/shawshanck/SoftEther-VPS-Server.git
         cd SoftEther-VPS-Server
 
-        echo "    2. Running the docker-compose.yml to install and start Install SoftEther VPN Server"
+        echo "    2. Running the docker-compose.yml to install and start SoftEther VPN Server"
         echo ""
         echo ""
 
           docker-compose up -d
           sudo docker-compose up -d
 
-        echo -e "    3. You can find SoftEther VPN Server files at ./docker/softherther-vpn-server"
+        echo -e "    3. You can find SoftEther VPN Server files at ./docker/SoftEther-VPS-Server"
         echo -e ""
         echo -e "${NC}    Navigate to your ${GREEN}server hostname / IP address ${NC}on ${GREEN}port 81${NC} to setup${NC}"
         echo -e "    Example: 0.0.0.0:81"
@@ -101,9 +101,9 @@ echo -e ""
 echo -e "${YELLOW}------------------------------------------------${NC}"
 echo -e ""
 
-PS3="Please enter 1 to install Install SoftEther VPN Server or 2 to exit setup. "
+PS3="Please enter 1 to Install SoftEther VPN Server or 2 to exit setup. "
 select _ in \
-    "Install Install SoftEther VPN Server" \
+    "Install SoftEther VPN Server" \
     "Exit"
 do
   case $REPLY in
