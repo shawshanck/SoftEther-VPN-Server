@@ -13,7 +13,7 @@ installApps()
 {
     clear
     OS="$REPLY" ## <-- This $REPLY is about OS Selection
-    echo -e "${NC}You can Install ${GREEN}SoftEther VPN Server${NC} with this script!${NC}"
+    echo -e "You can Install ${GREEN}SoftEther VPN Server${NC} with this script!${NC}"
     echo -e "Please select ${GREEN}'y'${NC} for each item you would like to install."
     echo -e "${RED}NOTE:${NC} Without Docker and Docker-Compose, you cannot install this container.${NC}"
     echo -e ""
@@ -67,8 +67,8 @@ startInstall()
 
         echo -e "    3. You can find SoftEther VPN Server files at ./docker/SoftEther-VPS-Server"
         echo -e ""
-        echo -e "${NC}      Now Download and install ${GREEN}SoftEther Server Manager ${NC}from the link below:"
-        echo -e "${BLUE}      https://www.softether-download.com/en.aspx?product=softether"
+        echo -e "      Now Download and install ${GREEN}SoftEther Server Manager ${NC}from the link below:"
+        echo -e "${BLUE}      https://www.softether-download.com/en.aspx?product=softether${NC}"
         echo -e ""
         echo -e ""
         echo -e "    After installation of SoftEther Server Manager successfully completed:"
