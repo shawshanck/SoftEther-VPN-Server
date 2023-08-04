@@ -1,8 +1,8 @@
 # SoftEther-VPS-Server
 
 ```
-mkdir docker && cd docker
-wget https://raw.githubusercontent.com/shawshanck/SoftEther-VPS-Server/main/install-svs.sh
-chmod +x install-svs.sh
-./install-svs.sh
+mkdir docker -p && cd docker
+git clone https://github.com/shawshanck/SoftEther-VPS-Server.git
+cd SoftEther-VPS-Server
+docker compose up -d
 ```
