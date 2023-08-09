@@ -2,7 +2,7 @@ version: '3'
 
 services:
   softether:
-    image: croc/softether
+    image: croc/softether:v4.42-9798-rtm
     volumes:
       - './logs/packet_log:/opt/vpnserver/packet_log'
       - './logs/security_log:/opt/vpnserver/security_log'
