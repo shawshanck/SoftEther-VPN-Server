@@ -57,7 +57,7 @@ startInstall()
         echo -e "${MAGENTA}      1.${NC}${GREEN} Clonning files from Github.${NC}"
 
         mkdir -p docker/softether-vpn-server
-        cd SoftEther-VPS-Server
+        cd docker/softether-vpn-server
         git clone https://github.com/shawshanck/SoftEther-VPN-Server.git
 
         echo -e "${MAGENTA}      2.${NC}${GREEN} Running the docker-compose.yml to install and start SoftEther VPN Server.${NC}"
