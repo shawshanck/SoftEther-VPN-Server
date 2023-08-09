@@ -8,6 +8,7 @@ MAGENTA='\033[0;35m'
 CYAN='\033[0;36m'
 GRAY='\033[0;37m'
 NC='\033[0m' # No Color
+myIP="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 
 installApps()
 {
@@ -16,6 +17,7 @@ installApps()
     echo -e "You can Install ${GREEN}SoftEther VPN Server${NC} with this script!${NC}"
     echo -e "Please select ${GREEN}'y'${NC} for each item you would like to install."
     echo -e "${RED}NOTE:${NC} Without Docker and Docker-Compose, you cannot install this container.${NC}"
+    echo -e ""
     echo -e "To install Docker and Docker-Compose, use the link below:"
     echo -e "${BLUE}https://github.com/shawshanck/Docker-and-Docker-Compose${NC}"
     echo -e ""
@@ -39,39 +41,39 @@ installApps()
 startInstall() 
 {
     clear
-    echo "#######################################################"
-    echo "###         Preparing for Installation              ###"
-    echo "#######################################################"
-    echo ""
+    echo -e "*******************************************************"
+    echo -e "***         Preparing for Installation              ***"
+    echo -e "*******************************************************"
+    echo -e ""
     sleep 3s
 
 
     if [[ "$SVS" == [yY] ]]; then
-        echo "##########################################"
-        echo "###     Install SoftEther VPN Server   ###"
-        echo "##########################################"
+        echo -e "*******************************************************"
+        echo -e "***         Install SoftEther VPN Server            ***"
+        echo -e "*******************************************************"
     
         # pull a softether vpn server docker-compose file from github
-        echo "    1. Pulling a default SoftEther VPN Server docker-compose.yml file."
+        echo -e "${MAGENTA}      1.${NC}${GREEN} Clonning files from Github.${NC}"
 
         mkdir docker -p && cd docker
         git clone https://github.com/shawshanck/SoftEther-VPS-Server.git
         cd SoftEther-VPS-Server
 
-        echo "    2. Running the docker-compose.yml to install and start SoftEther VPN Server"
+        echo -e "${MAGENTA}      2.${NC}${GREEN} Running the docker-compose.yml to install and start SoftEther VPN Server.${NC}"
         echo ""
         echo ""
 
           docker-compose up -d
           sudo docker-compose up -d
 
-        echo -e "    3. You can find SoftEther VPN Server files at ./docker/SoftEther-VPS-Server"
+        echo -e "${MAGENTA}      3.${NC}${GREEN} Installation completed.${NC}"
         echo -e ""
-        echo -e "      Now Download and install ${GREEN}SoftEther Server Manager ${NC}from the link below:"
+        echo -e "      Now download and install ${GREEN}SoftEther Server Manager ${NC}from the link below:"
         echo -e "${BLUE}      https://www.softether-download.com/en.aspx?product=softether${NC}"
         echo -e ""
         echo -e ""
-        echo -e "    After installation of SoftEther Server Manager successfully completed:"
+        echo -e "      After installation of SoftEther Server Manager successfully completed:"
         echo -e "${GREEN}        1- Create a new setting"
         echo -e "${GREEN}        2- Enter your server/machine IP address in "Host Name""
         echo -e "${GREEN}        3- Select your preferred port. Default is 443"
@@ -79,7 +81,6 @@ startInstall()
         echo -e "${GREEN}        5- Now Connect and do the configurations"
         echo -e "${GREEN}        6- For further tutorials and guides please visit the page below:"
         echo -e "${BLUE}        https://github.com/shawshanck/SoftEther-VPS-Server"
-
         echo -e ""
         echo -e ""
         echo -e "      ${CYAN}Provided to you by ${YELLOW}Mohammad Mohammadpour${NC}"
