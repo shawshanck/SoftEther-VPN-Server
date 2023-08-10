@@ -5,7 +5,7 @@
 <br>
 </p>
 
-<p align="center">With this script, you can automatically install SoftEther VPM Server on Docker.</p>
+<p align="center">With this script, you can automatically install SoftEther VPN Server on Docker.</p>
 
 >**Note**: Without Docker and Docker-Compose it fails. [First install Docker and Docker-Compose from here](https://github.com/shawshanck/Docker-and-Docker-Compose).
 
