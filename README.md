@@ -26,3 +26,8 @@ Then use the command below:
 bash <(curl -Ls https://raw.githubusercontent.com/shawshanck/SoftEther-VPN-Server/main/install.sh --ipv4)
 ```
 <hr>
+
+<h2>Server Manager & Client Software:</h2>
+
+To download server manager and client software go [here](https://www.softether-download.com/en.aspx?product=softether).
+
