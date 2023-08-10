@@ -1,4 +1,4 @@
-<h1 align="center">"SoftEther VPM Server"</h1>
+<h1 align="center">"SoftEther VPN Server"</h1>
 
 <p align="center">
 <img src="https://cdn-thumbs.imagevenue.com/d8/24/31/ME16QOGV_b.png" width="100">
